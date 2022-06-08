@@ -1,0 +1,750 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+@author: federicarobertazzi
+"""
+import pandas as pd 
+import numpy as np
+import matplotlib.pyplot as plt
+
+data_training_01 = pd.read_csv('<insert path>',delimiter = ';',decimal=",")
+data_training_01.head()
+
+data_test_01 = pd.read_csv('<insert path>',delimiter = ';',decimal=",")
+data_test_01.head()
+
+##################################
+data_training_03 = pd.read_csv('<insert path>',delimiter = ';',decimal=",")
+data_training_03.head()
+
+data_test_03 = pd.read_csv('<insert path>',delimiter = ';',decimal=",")
+data_test_03.head()
+
+##################################
+data_training_05 = pd.read_csv('<insert path>',delimiter = ';',decimal=",")
+data_training_05.head()
+
+data_test_05 = pd.read_csv('<insert path>',delimiter = ';',decimal=",")
+data_test_05.head()
+
+##################################
+data_training_07 = pd.read_csv('<insert path>',delimiter = ';',decimal=",")
+data_training_07.head()
+
+data_test_07 = pd.read_csv('<insert path>',delimiter = ';',decimal=",")
+data_test_07.head()
+
+##################################
+data_training_09 = pd.read_csv('<insert path>',delimiter = ';',decimal=",")
+data_training_09.head()
+
+data_test_09 = pd.read_csv('<insert path>',delimiter = ';',decimal=",")
+data_test_09.head()
+
+##################################
+
+#SEROTONIN-->DOPAMINE 0.1
+#training
+vec_mean_mean_reaction_time_Go_01_training=np.mean(data_training_01['mean_reaction_time_Go_1'])
+vec_mean_mean_reaction_time_Hold_01_training=np.mean(data_training_01['mean_reaction_time_Hold_1'])
+vec_mean_mean_reaction_time_Hold_correct_01_training=np.mean(data_training_01['mean_reaction_time_Hold_correct_1'])
+vec_mean_mean_reaction_time_Hold_total_01_training=np.mean(data_training_01['mean_reaction_time_Hold_total_1'])
+
+vec_mean_mean_max_PMC_Go_01_training=np.mean(data_training_01['mean_max_PMC_Go'])
+vec_mean_mean_max_PMC_Hold_01_training=np.mean(data_training_01['mean_max_PMC_Hold'])
+vec_mean_mean_max_PMC_Hold_correct_01_training=np.mean(data_training_01['mean_max_PMC_Hold_correct'])
+vec_mean_mean_max_PMC_Hold_total_01_training=np.mean(data_training_01['mean_max_PMC_Hold_total'])
+
+vec_mean_mean_Pmax_Go_01_training=np.mean(data_training_01['mean_Pmax_Go'])
+vec_mean_mean_Pmax_Hold_01_training=np.mean(data_training_01['mean_Pmax_Hold'])
+vec_mean_mean_Pmax_Hold_correct_01_training=np.mean(data_training_01['mean_Pmax_Hold_correct'])
+vec_mean_mean_Pmax_Hold_total_01_training=np.mean(data_training_01['mean_Pmax_Hold_total'])
+
+vec_mean_right_inhibition_01_training=np.mean(data_training_01['right_inhibition'])
+vec_mean_accuracy_01_training=np.mean(data_training_01['accuracy'])
+
+vec_std_mean_reaction_time_Go_01_training=np.std(data_training_01['mean_reaction_time_Go_1'])
+vec_std_mean_reaction_time_Hold_01_training=np.std(data_training_01['mean_reaction_time_Hold_1'])
+vec_std_mean_reaction_time_Hold_correct_01_training=np.std(data_training_01['mean_reaction_time_Hold_correct_1'])
+vec_std_mean_reaction_time_Hold_total_01_training=np.std(data_training_01['mean_reaction_time_Hold_total_1'])
+
+vec_std_mean_max_PMC_Go_01_training=np.std(data_training_01['mean_max_PMC_Go'])
+vec_std_mean_max_PMC_Hold_01_training=np.std(data_training_01['mean_max_PMC_Hold'])
+vec_std_mean_max_PMC_Hold_correct_01_training=np.std(data_training_01['mean_max_PMC_Hold_correct'])
+vec_std_mean_max_PMC_Hold_total_01_training=np.std(data_training_01['mean_max_PMC_Hold_total'])
+
+vec_std_mean_Pmax_Go_01_training=np.std(data_training_01['mean_Pmax_Go'])
+vec_std_mean_Pmax_Hold_01_training=np.std(data_training_01['mean_Pmax_Hold'])
+vec_std_mean_Pmax_Hold_correct_01_training=np.std(data_training_01['mean_Pmax_Hold_correct'])
+vec_std_mean_Pmax_Hold_total_01_training=np.std(data_training_01['mean_Pmax_Hold_total'])
+
+vec_std_right_inhibition_01_training=np.std(data_training_01['right_inhibition'])
+vec_std_accuracy_01_training=np.std(data_training_01['accuracy'])
+
+#test
+vec_mean_mean_reaction_time_Go_01_test=np.mean(data_test_01['mean_reaction_time_Go_1'])
+vec_mean_mean_reaction_time_Hold_01_test=np.mean(data_test_01['mean_reaction_time_Hold_1'])
+vec_mean_mean_reaction_time_Hold_correct_01_test=np.mean(data_test_01['mean_reaction_time_Hold_correct_1'])
+vec_mean_mean_reaction_time_Hold_total_01_test=np.mean(data_test_01['mean_reaction_time_Hold_total_1'])
+
+vec_mean_mean_max_PMC_Go_01_test=np.mean(data_test_01['mean_max_PMC_Go'])
+vec_mean_mean_max_PMC_Hold_01_test=np.mean(data_test_01['mean_max_PMC_Hold'])
+vec_mean_mean_max_PMC_Hold_correct_01_test=np.mean(data_test_01['mean_max_PMC_Hold_correct'])
+vec_mean_mean_max_PMC_Hold_total_01_test=np.mean(data_test_01['mean_max_PMC_Hold_total'])
+
+vec_mean_mean_Pmax_Go_01_test=np.mean(data_test_01['mean_Pmax_Go'])
+vec_mean_mean_Pmax_Hold_01_test=np.mean(data_test_01['mean_Pmax_Hold'])
+vec_mean_mean_Pmax_Hold_correct_01_test=np.mean(data_test_01['mean_Pmax_Hold_correct'])
+vec_mean_mean_Pmax_Hold_total_01_test=np.mean(data_test_01['mean_Pmax_Hold_total'])
+
+vec_mean_mean_SSRT_01_test=np.mean(data_test_01['SSRT'])
+vec_mean_right_inhibition_01_test=np.mean(data_test_01['right_inhibition'])
+vec_mean_accuracy_01_test=np.mean(data_test_01['accuracy'])
+
+vec_std_mean_reaction_time_Go_01_test=np.std(data_test_01['mean_reaction_time_Go_1'])
+vec_std_mean_reaction_time_Hold_01_test=np.std(data_test_01['mean_reaction_time_Hold_1'])
+vec_std_mean_reaction_time_Hold_correct_01_test=np.std(data_test_01['mean_reaction_time_Hold_correct_1'])
+vec_std_mean_reaction_time_Hold_total_01_test=np.std(data_test_01['mean_reaction_time_Hold_total_1'])
+
+vec_std_mean_max_PMC_Go_01_test=np.std(data_test_01['mean_max_PMC_Go'])
+vec_std_mean_max_PMC_Hold_01_test=np.std(data_test_01['mean_max_PMC_Hold'])
+vec_std_mean_max_PMC_Hold_correct_01_test=np.std(data_test_01['mean_max_PMC_Hold_correct'])
+vec_std_mean_max_PMC_Hold_total_01_test=np.std(data_test_01['mean_max_PMC_Hold_total'])
+
+vec_std_mean_Pmax_Go_01_test=np.std(data_test_01['mean_Pmax_Go'])
+vec_std_mean_Pmax_Hold_01_test=np.std(data_test_01['mean_Pmax_Hold'])
+vec_std_mean_Pmax_Hold_correct_01_test=np.std(data_test_01['mean_Pmax_Hold_correct'])
+vec_std_mean_Pmax_Hold_total_01_test=np.std(data_test_01['mean_Pmax_Hold_total'])
+
+vec_std_mean_SSRT_01_test=np.std(data_test_01['SSRT'])
+vec_std_right_inhibition_01_test=np.std(data_test_01['right_inhibition'])
+vec_std_accuracy_01_test=np.std(data_test_01['accuracy'])
+
+#SEROTONIN-->DOPAMINE 0.3
+#training
+vec_mean_mean_reaction_time_Go_03_training=np.mean(data_training_03['mean_reaction_time_Go_1'])
+vec_mean_mean_reaction_time_Hold_03_training=np.mean(data_training_03['mean_reaction_time_Hold_1'])
+vec_mean_mean_reaction_time_Hold_correct_03_training=np.mean(data_training_03['mean_reaction_time_Hold_correct_1'])
+vec_mean_mean_reaction_time_Hold_total_03_training=np.mean(data_training_03['mean_reaction_time_Hold_total_1'])
+
+vec_mean_mean_max_PMC_Go_03_training=np.mean(data_training_03['mean_max_PMC_Go'])
+vec_mean_mean_max_PMC_Hold_03_training=np.mean(data_training_03['mean_max_PMC_Hold'])
+vec_mean_mean_max_PMC_Hold_correct_03_training=np.mean(data_training_03['mean_max_PMC_Hold_correct'])
+vec_mean_mean_max_PMC_Hold_total_03_training=np.mean(data_training_03['mean_max_PMC_Hold_total'])
+
+vec_mean_mean_Pmax_Go_03_training=np.mean(data_training_03['mean_Pmax_Go'])
+vec_mean_mean_Pmax_Hold_03_training=np.mean(data_training_03['mean_Pmax_Hold'])
+vec_mean_mean_Pmax_Hold_correct_03_training=np.mean(data_training_03['mean_Pmax_Hold_correct'])
+vec_mean_mean_Pmax_Hold_total_03_training=np.mean(data_training_03['mean_Pmax_Hold_total'])
+
+vec_mean_right_inhibition_03_training=np.mean(data_training_03['right_inhibition'])
+vec_mean_accuracy_03_training=np.mean(data_training_03['accuracy'])
+
+vec_std_mean_reaction_time_Go_03_training=np.std(data_training_03['mean_reaction_time_Go_1'])
+vec_std_mean_reaction_time_Hold_03_training=np.std(data_training_03['mean_reaction_time_Hold_1'])
+vec_std_mean_reaction_time_Hold_correct_03_training=np.std(data_training_03['mean_reaction_time_Hold_correct_1'])
+vec_std_mean_reaction_time_Hold_total_03_training=np.std(data_training_03['mean_reaction_time_Hold_total_1'])
+
+vec_std_mean_max_PMC_Go_03_training=np.std(data_training_03['mean_max_PMC_Go'])
+vec_std_mean_max_PMC_Hold_03_training=np.std(data_training_03['mean_max_PMC_Hold'])
+vec_std_mean_max_PMC_Hold_correct_03_training=np.std(data_training_03['mean_max_PMC_Hold_correct'])
+vec_std_mean_max_PMC_Hold_total_03_training=np.std(data_training_03['mean_max_PMC_Hold_total'])
+
+vec_std_mean_Pmax_Go_03_training=np.std(data_training_03['mean_Pmax_Go'])
+vec_std_mean_Pmax_Hold_03_training=np.std(data_training_03['mean_Pmax_Hold'])
+vec_std_mean_Pmax_Hold_correct_03_training=np.std(data_training_03['mean_Pmax_Hold_correct'])
+vec_std_mean_Pmax_Hold_total_03_training=np.std(data_training_03['mean_Pmax_Hold_total'])
+
+vec_std_right_inhibition_03_training=np.std(data_training_03['right_inhibition'])
+vec_std_accuracy_03_training=np.std(data_training_03['accuracy'])
+
+#test
+vec_mean_mean_reaction_time_Go_03_test=np.mean(data_test_03['mean_reaction_time_Go_1'])
+vec_mean_mean_reaction_time_Hold_03_test=np.mean(data_test_03['mean_reaction_time_Hold_1'])
+vec_mean_mean_reaction_time_Hold_correct_03_test=np.mean(data_test_03['mean_reaction_time_Hold_correct_1'])
+vec_mean_mean_reaction_time_Hold_total_03_test=np.mean(data_test_03['mean_reaction_time_Hold_total_1'])
+
+vec_mean_mean_max_PMC_Go_03_test=np.mean(data_test_03['mean_max_PMC_Go'])
+vec_mean_mean_max_PMC_Hold_03_test=np.mean(data_test_03['mean_max_PMC_Hold'])
+vec_mean_mean_max_PMC_Hold_correct_03_test=np.mean(data_test_03['mean_max_PMC_Hold_correct'])
+vec_mean_mean_max_PMC_Hold_total_03_test=np.mean(data_test_03['mean_max_PMC_Hold_total'])
+
+vec_mean_mean_Pmax_Go_03_test=np.mean(data_test_03['mean_Pmax_Go'])
+vec_mean_mean_Pmax_Hold_03_test=np.mean(data_test_03['mean_Pmax_Hold'])
+vec_mean_mean_Pmax_Hold_correct_03_test=np.mean(data_test_03['mean_Pmax_Hold_correct'])
+vec_mean_mean_Pmax_Hold_total_03_test=np.mean(data_test_03['mean_Pmax_Hold_total'])
+
+vec_mean_mean_SSRT_03_test=np.mean(data_test_03['SSRT'])
+vec_mean_right_inhibition_03_test=np.mean(data_test_03['right_inhibition'])
+vec_mean_accuracy_03_test=np.mean(data_test_03['accuracy'])
+
+vec_std_mean_reaction_time_Go_03_test=np.std(data_test_03['mean_reaction_time_Go_1'])
+vec_std_mean_reaction_time_Hold_03_test=np.std(data_test_03['mean_reaction_time_Hold_1'])
+vec_std_mean_reaction_time_Hold_correct_03_test=np.std(data_test_03['mean_reaction_time_Hold_correct_1'])
+vec_std_mean_reaction_time_Hold_total_03_test=np.std(data_test_03['mean_reaction_time_Hold_total_1'])
+
+vec_std_mean_max_PMC_Go_03_test=np.std(data_test_03['mean_max_PMC_Go'])
+vec_std_mean_max_PMC_Hold_03_test=np.std(data_test_03['mean_max_PMC_Hold'])
+vec_std_mean_max_PMC_Hold_correct_03_test=np.std(data_test_03['mean_max_PMC_Hold_correct'])
+vec_std_mean_max_PMC_Hold_total_03_test=np.std(data_test_03['mean_max_PMC_Hold_total'])
+
+vec_std_mean_Pmax_Go_03_test=np.std(data_test_03['mean_Pmax_Go'])
+vec_std_mean_Pmax_Hold_03_test=np.std(data_test_03['mean_Pmax_Hold'])
+vec_std_mean_Pmax_Hold_correct_03_test=np.std(data_test_03['mean_Pmax_Hold_correct'])
+vec_std_mean_Pmax_Hold_total_03_test=np.std(data_test_03['mean_Pmax_Hold_total'])
+
+vec_std_mean_SSRT_03_test=np.std(data_test_03['SSRT'])
+vec_std_right_inhibition_03_test=np.std(data_test_03['right_inhibition'])
+vec_std_accuracy_03_test=np.std(data_test_03['accuracy'])
+
+#SEROTONIN-->DOPAMINE 0.5
+#training
+vec_mean_mean_reaction_time_Go_05_training=np.mean(data_training_05['mean_reaction_time_Go_1'])
+vec_mean_mean_reaction_time_Hold_05_training=np.mean(data_training_05['mean_reaction_time_Hold_1'])
+vec_mean_mean_reaction_time_Hold_correct_05_training=np.mean(data_training_05['mean_reaction_time_Hold_correct_1'])
+vec_mean_mean_reaction_time_Hold_total_05_training=np.mean(data_training_05['mean_reaction_time_Hold_total_1'])
+
+vec_mean_mean_max_PMC_Go_05_training=np.mean(data_training_05['mean_max_PMC_Go'])
+vec_mean_mean_max_PMC_Hold_05_training=np.mean(data_training_05['mean_max_PMC_Hold'])
+vec_mean_mean_max_PMC_Hold_correct_05_training=np.mean(data_training_05['mean_max_PMC_Hold_correct'])
+vec_mean_mean_max_PMC_Hold_total_05_training=np.mean(data_training_05['mean_max_PMC_Hold_total'])
+
+
+vec_mean_mean_Pmax_Go_05_training=np.mean(data_training_05['mean_Pmax_Go'])
+vec_mean_mean_Pmax_Hold_05_training=np.mean(data_training_05['mean_Pmax_Hold'])
+vec_mean_mean_Pmax_Hold_correct_05_training=np.mean(data_training_05['mean_Pmax_Hold_correct'])
+vec_mean_mean_Pmax_Hold_total_05_training=np.mean(data_training_05['mean_Pmax_Hold_total'])
+
+vec_mean_right_inhibition_05_training=np.mean(data_training_05['right_inhibition'])
+vec_mean_accuracy_05_training=np.mean(data_training_05['accuracy'])
+
+vec_std_mean_reaction_time_Go_05_training=np.std(data_training_05['mean_reaction_time_Go_1'])
+vec_std_mean_reaction_time_Hold_05_training=np.std(data_training_05['mean_reaction_time_Hold_1'])
+vec_std_mean_reaction_time_Hold_correct_05_training=np.std(data_training_05['mean_reaction_time_Hold_correct_1'])
+vec_std_mean_reaction_time_Hold_total_05_training=np.std(data_training_05['mean_reaction_time_Hold_total_1'])
+
+vec_std_mean_max_PMC_Go_05_training=np.std(data_training_05['mean_max_PMC_Go'])
+vec_std_mean_max_PMC_Hold_05_training=np.std(data_training_05['mean_max_PMC_Hold'])
+vec_std_mean_max_PMC_Hold_correct_05_training=np.std(data_training_05['mean_max_PMC_Hold_correct'])
+vec_std_mean_max_PMC_Hold_total_05_training=np.std(data_training_05['mean_max_PMC_Hold_total'])
+
+vec_std_mean_Pmax_Go_05_training=np.std(data_training_05['mean_Pmax_Go'])
+vec_std_mean_Pmax_Hold_05_training=np.std(data_training_05['mean_Pmax_Hold'])
+vec_std_mean_Pmax_Hold_correct_05_training=np.std(data_training_05['mean_Pmax_Hold_correct'])
+vec_std_mean_Pmax_Hold_total_05_training=np.std(data_training_05['mean_Pmax_Hold_total'])
+
+vec_std_right_inhibition_05_training=np.std(data_training_05['right_inhibition'])
+vec_std_accuracy_05_training=np.std(data_training_05['accuracy'])
+
+#test
+vec_mean_mean_reaction_time_Go_05_test=np.mean(data_test_05['mean_reaction_time_Go_1'])
+vec_mean_mean_reaction_time_Hold_05_test=np.mean(data_test_05['mean_reaction_time_Hold_1'])
+vec_mean_mean_reaction_time_Hold_correct_05_test=np.mean(data_test_05['mean_reaction_time_Hold_correct_1'])
+vec_mean_mean_reaction_time_Hold_total_05_test=np.mean(data_test_05['mean_reaction_time_Hold_total_1'])
+
+vec_mean_mean_max_PMC_Go_05_test=np.mean(data_test_05['mean_max_PMC_Go'])
+vec_mean_mean_max_PMC_Hold_05_test=np.mean(data_test_05['mean_max_PMC_Hold'])
+vec_mean_mean_max_PMC_Hold_correct_05_test=np.mean(data_test_05['mean_max_PMC_Hold_correct'])
+vec_mean_mean_max_PMC_Hold_total_05_test=np.mean(data_test_05['mean_max_PMC_Hold_total'])
+
+vec_mean_mean_Pmax_Go_05_test=np.mean(data_test_05['mean_Pmax_Go'])
+vec_mean_mean_Pmax_Hold_05_test=np.mean(data_test_05['mean_Pmax_Hold'])
+vec_mean_mean_Pmax_Hold_correct_05_test=np.mean(data_test_05['mean_Pmax_Hold_correct'])
+vec_mean_mean_Pmax_Hold_total_05_test=np.mean(data_test_05['mean_Pmax_Hold_total'])
+
+vec_mean_mean_SSRT_05_test=np.mean(data_test_05['SSRT'])
+vec_mean_right_inhibition_05_test=np.mean(data_test_05['right_inhibition'])
+vec_mean_accuracy_05_test=np.mean(data_test_05['accuracy'])
+
+vec_std_mean_reaction_time_Go_05_test=np.std(data_test_05['mean_reaction_time_Go_1'])
+vec_std_mean_reaction_time_Hold_05_test=np.std(data_test_05['mean_reaction_time_Hold_1'])
+vec_std_mean_reaction_time_Hold_correct_05_test=np.std(data_test_05['mean_reaction_time_Hold_correct_1'])
+vec_std_mean_reaction_time_Hold_total_05_test=np.std(data_test_05['mean_reaction_time_Hold_total_1'])
+
+vec_std_mean_max_PMC_Go_05_test=np.std(data_test_05['mean_max_PMC_Go'])
+vec_std_mean_max_PMC_Hold_05_test=np.std(data_test_05['mean_max_PMC_Hold'])
+vec_std_mean_max_PMC_Hold_correct_05_test=np.std(data_test_05['mean_max_PMC_Hold_correct'])
+vec_std_mean_max_PMC_Hold_total_05_test=np.std(data_test_05['mean_max_PMC_Hold_total'])
+
+vec_std_mean_Pmax_Go_05_test=np.std(data_test_05['mean_Pmax_Go'])
+vec_std_mean_Pmax_Hold_05_test=np.std(data_test_05['mean_Pmax_Hold'])
+vec_std_mean_Pmax_Hold_correct_05_test=np.std(data_test_05['mean_Pmax_Hold_correct'])
+vec_std_mean_Pmax_Hold_total_05_test=np.std(data_test_05['mean_Pmax_Hold_total'])
+
+vec_std_mean_SSRT_05_test=np.std(data_test_05['SSRT'])
+vec_std_right_inhibition_05_test=np.std(data_test_05['right_inhibition'])
+vec_std_accuracy_05_test=np.std(data_test_05['accuracy'])
+
+#SEROTONIN-->DOPAMINE 0.7
+#training
+vec_mean_mean_reaction_time_Go_07_training=np.mean(data_training_07['mean_reaction_time_Go_1'])
+vec_mean_mean_reaction_time_Hold_07_training=np.mean(data_training_07['mean_reaction_time_Hold_1'])
+vec_mean_mean_reaction_time_Hold_correct_07_training=np.mean(data_training_07['mean_reaction_time_Hold_correct_1'])
+vec_mean_mean_reaction_time_Hold_total_07_training=np.mean(data_training_07['mean_reaction_time_Hold_total_1'])
+
+vec_mean_mean_max_PMC_Go_07_training=np.mean(data_training_07['mean_max_PMC_Go'])
+vec_mean_mean_max_PMC_Hold_07_training=np.mean(data_training_07['mean_max_PMC_Hold'])
+vec_mean_mean_max_PMC_Hold_correct_07_training=np.mean(data_training_07['mean_max_PMC_Hold_correct'])
+vec_mean_mean_max_PMC_Hold_total_07_training=np.mean(data_training_07['mean_max_PMC_Hold_total'])
+
+vec_mean_mean_Pmax_Go_07_training=np.mean(data_training_07['mean_Pmax_Go'])
+vec_mean_mean_Pmax_Hold_07_training=np.mean(data_training_07['mean_Pmax_Hold'])
+vec_mean_mean_Pmax_Hold_correct_07_training=np.mean(data_training_07['mean_Pmax_Hold_correct'])
+vec_mean_mean_Pmax_Hold_total_07_training=np.mean(data_training_07['mean_Pmax_Hold_total'])
+
+vec_mean_right_inhibition_07_training=np.mean(data_training_07['right_inhibition'])
+vec_mean_accuracy_07_training=np.mean(data_training_07['accuracy'])
+
+vec_std_mean_reaction_time_Go_07_training=np.std(data_training_07['mean_reaction_time_Go_1'])
+vec_std_mean_reaction_time_Hold_07_training=np.std(data_training_07['mean_reaction_time_Hold_1'])
+vec_std_mean_reaction_time_Hold_correct_07_training=np.std(data_training_07['mean_reaction_time_Hold_correct_1'])
+vec_std_mean_reaction_time_Hold_total_07_training=np.std(data_training_07['mean_reaction_time_Hold_total_1'])
+
+vec_std_mean_max_PMC_Go_07_training=np.std(data_training_07['mean_max_PMC_Go'])
+vec_std_mean_max_PMC_Hold_07_training=np.std(data_training_07['mean_max_PMC_Hold'])
+vec_std_mean_max_PMC_Hold_correct_07_training=np.std(data_training_07['mean_max_PMC_Hold_correct'])
+vec_std_mean_max_PMC_Hold_total_07_training=np.std(data_training_07['mean_max_PMC_Hold_total'])
+
+vec_std_mean_Pmax_Go_07_training=np.std(data_training_07['mean_Pmax_Go'])
+vec_std_mean_Pmax_Hold_07_training=np.std(data_training_07['mean_Pmax_Hold'])
+vec_std_mean_Pmax_Hold_correct_07_training=np.std(data_training_07['mean_Pmax_Hold_correct'])
+vec_std_mean_Pmax_Hold_total_07_training=np.std(data_training_07['mean_Pmax_Hold_total'])
+
+vec_std_right_inhibition_07_training=np.std(data_training_07['right_inhibition'])
+vec_std_accuracy_07_training=np.std(data_training_07['accuracy'])
+
+#test
+vec_mean_mean_reaction_time_Go_07_test=np.mean(data_test_07['mean_reaction_time_Go_1'])
+vec_mean_mean_reaction_time_Hold_07_test=np.mean(data_test_07['mean_reaction_time_Hold_1'])
+vec_mean_mean_reaction_time_Hold_correct_07_test=np.mean(data_test_07['mean_reaction_time_Hold_correct_1'])
+vec_mean_mean_reaction_time_Hold_total_07_test=np.mean(data_test_07['mean_reaction_time_Hold_total_1'])
+
+vec_mean_mean_max_PMC_Go_07_test=np.mean(data_test_07['mean_max_PMC_Go'])
+vec_mean_mean_max_PMC_Hold_07_test=np.mean(data_test_07['mean_max_PMC_Hold'])
+vec_mean_mean_max_PMC_Hold_correct_07_test=np.mean(data_test_07['mean_max_PMC_Hold_correct'])
+vec_mean_mean_max_PMC_Hold_total_07_test=np.mean(data_test_07['mean_max_PMC_Hold_total'])
+
+vec_mean_mean_Pmax_Go_07_test=np.mean(data_test_07['mean_Pmax_Go'])
+vec_mean_mean_Pmax_Hold_07_test=np.mean(data_test_07['mean_Pmax_Hold'])
+vec_mean_mean_Pmax_Hold_correct_07_test=np.mean(data_test_07['mean_Pmax_Hold_correct'])
+vec_mean_mean_Pmax_Hold_total_07_test=np.mean(data_test_07['mean_Pmax_Hold_total'])
+
+vec_mean_mean_SSRT_07_test=np.mean(data_test_07['SSRT'])
+vec_mean_right_inhibition_07_test=np.mean(data_test_07['right_inhibition'])
+vec_mean_accuracy_07_test=np.mean(data_test_07['accuracy'])
+
+vec_std_mean_reaction_time_Go_07_test=np.std(data_test_07['mean_reaction_time_Go_1'])
+vec_std_mean_reaction_time_Hold_07_test=np.std(data_test_07['mean_reaction_time_Hold_1'])
+vec_std_mean_reaction_time_Hold_correct_07_test=np.std(data_test_07['mean_reaction_time_Hold_correct_1'])
+vec_std_mean_reaction_time_Hold_total_07_test=np.std(data_test_07['mean_reaction_time_Hold_total_1'])
+
+vec_std_mean_max_PMC_Go_07_test=np.std(data_test_07['mean_max_PMC_Go'])
+vec_std_mean_max_PMC_Hold_07_test=np.std(data_test_07['mean_max_PMC_Hold'])
+vec_std_mean_max_PMC_Hold_correct_07_test=np.std(data_test_07['mean_max_PMC_Hold_correct'])
+vec_std_mean_max_PMC_Hold_total_07_test=np.std(data_test_07['mean_max_PMC_Hold_total'])
+
+vec_std_mean_Pmax_Go_07_test=np.std(data_test_07['mean_Pmax_Go'])
+vec_std_mean_Pmax_Hold_07_test=np.std(data_test_07['mean_Pmax_Hold'])
+vec_std_mean_Pmax_Hold_correct_07_test=np.std(data_test_07['mean_Pmax_Hold_correct'])
+vec_std_mean_Pmax_Hold_total_07_test=np.std(data_test_07['mean_Pmax_Hold_total'])
+
+vec_std_mean_SSRT_07_test=np.std(data_test_07['SSRT'])
+vec_std_right_inhibition_07_test=np.std(data_test_07['right_inhibition'])
+vec_std_accuracy_07_test=np.std(data_test_07['accuracy'])
+
+#SEROTONIN-->DOPAMINE 0.9
+#training
+vec_mean_mean_reaction_time_Go_09_training=np.mean(data_training_09['mean_reaction_time_Go_1'])
+vec_mean_mean_reaction_time_Hold_09_training=np.mean(data_training_09['mean_reaction_time_Hold_1'])
+vec_mean_mean_reaction_time_Hold_correct_09_training=np.mean(data_training_09['mean_reaction_time_Hold_correct_1'])
+vec_mean_mean_reaction_time_Hold_total_09_training=np.mean(data_training_09['mean_reaction_time_Hold_total_1'])
+
+vec_mean_mean_max_PMC_Go_09_training=np.mean(data_training_09['mean_max_PMC_Go'])
+vec_mean_mean_max_PMC_Hold_09_training=np.mean(data_training_09['mean_max_PMC_Hold'])
+vec_mean_mean_max_PMC_Hold_correct_09_training=np.mean(data_training_09['mean_max_PMC_Hold_correct'])
+vec_mean_mean_max_PMC_Hold_total_09_training=np.mean(data_training_09['mean_max_PMC_Hold_total'])
+
+vec_mean_mean_Pmax_Go_09_training=np.mean(data_training_09['mean_Pmax_Go'])
+vec_mean_mean_Pmax_Hold_09_training=np.mean(data_training_09['mean_Pmax_Hold'])
+vec_mean_mean_Pmax_Hold_correct_09_training=np.mean(data_training_09['mean_Pmax_Hold_correct'])
+vec_mean_mean_Pmax_Hold_total_09_training=np.mean(data_training_09['mean_Pmax_Hold_total'])
+
+vec_mean_right_inhibition_09_training=np.mean(data_training_09['right_inhibition'])
+vec_mean_accuracy_09_training=np.mean(data_training_09['accuracy'])
+
+vec_std_mean_reaction_time_Go_09_training=np.std(data_training_09['mean_reaction_time_Go_1'])
+vec_std_mean_reaction_time_Hold_09_training=np.std(data_training_09['mean_reaction_time_Hold_1'])
+vec_std_mean_reaction_time_Hold_correct_09_training=np.std(data_training_09['mean_reaction_time_Hold_correct_1'])
+vec_std_mean_reaction_time_Hold_total_09_training=np.std(data_training_09['mean_reaction_time_Hold_total_1'])
+
+vec_std_mean_max_PMC_Go_09_training=np.std(data_training_09['mean_max_PMC_Go'])
+vec_std_mean_max_PMC_Hold_09_training=np.std(data_training_09['mean_max_PMC_Hold'])
+vec_std_mean_max_PMC_Hold_correct_09_training=np.std(data_training_09['mean_max_PMC_Hold_correct'])
+vec_std_mean_max_PMC_Hold_total_09_training=np.std(data_training_09['mean_max_PMC_Hold_total'])
+
+vec_std_mean_Pmax_Go_09_training=np.std(data_training_09['mean_Pmax_Go'])
+vec_std_mean_Pmax_Hold_09_training=np.std(data_training_09['mean_Pmax_Hold'])
+vec_std_mean_Pmax_Hold_correct_09_training=np.std(data_training_09['mean_Pmax_Hold_correct'])
+vec_std_mean_Pmax_Hold_total_09_training=np.std(data_training_09['mean_Pmax_Hold_total'])
+
+vec_std_right_inhibition_09_training=np.std(data_training_09['right_inhibition'])
+vec_std_accuracy_09_training=np.std(data_training_09['accuracy'])
+
+#test
+vec_mean_mean_reaction_time_Go_09_test=np.mean(data_test_09['mean_reaction_time_Go_1'])
+vec_mean_mean_reaction_time_Hold_09_test=np.mean(data_test_09['mean_reaction_time_Hold_1'])
+vec_mean_mean_reaction_time_Hold_correct_09_test=np.mean(data_test_09['mean_reaction_time_Hold_correct_1'])
+vec_mean_mean_reaction_time_Hold_total_09_test=np.mean(data_test_09['mean_reaction_time_Hold_total_1'])
+
+vec_mean_mean_max_PMC_Go_09_test=np.mean(data_test_09['mean_max_PMC_Go'])
+vec_mean_mean_max_PMC_Hold_09_test=np.mean(data_test_09['mean_max_PMC_Hold'])
+vec_mean_mean_max_PMC_Hold_correct_09_test=np.mean(data_test_09['mean_max_PMC_Hold_correct'])
+vec_mean_mean_max_PMC_Hold_total_09_test=np.mean(data_test_09['mean_max_PMC_Hold_total'])
+
+vec_mean_mean_Pmax_Go_09_test=np.mean(data_test_09['mean_Pmax_Go'])
+vec_mean_mean_Pmax_Hold_09_test=np.mean(data_test_09['mean_Pmax_Hold'])
+vec_mean_mean_Pmax_Hold_correct_09_test=np.mean(data_test_09['mean_Pmax_Hold_correct'])
+vec_mean_mean_Pmax_Hold_total_09_test=np.mean(data_test_09['mean_Pmax_Hold_total'])
+
+vec_mean_mean_SSRT_09_test=np.mean(data_test_09['SSRT'])
+vec_mean_right_inhibition_09_test=np.mean(data_test_09['right_inhibition'])
+vec_mean_accuracy_09_test=np.mean(data_test_09['accuracy'])
+
+vec_std_mean_reaction_time_Go_09_test=np.std(data_test_09['mean_reaction_time_Go_1'])
+vec_std_mean_reaction_time_Hold_09_test=np.std(data_test_09['mean_reaction_time_Hold_1'])
+vec_std_mean_reaction_time_Hold_correct_09_test=np.std(data_test_09['mean_reaction_time_Hold_correct_1'])
+vec_std_mean_reaction_time_Hold_total_09_test=np.std(data_test_09['mean_reaction_time_Hold_total_1'])
+
+vec_std_mean_max_PMC_Go_09_test=np.std(data_test_09['mean_max_PMC_Go'])
+vec_std_mean_max_PMC_Hold_09_test=np.std(data_test_09['mean_max_PMC_Hold'])
+vec_std_mean_max_PMC_Hold_correct_09_test=np.std(data_test_09['mean_max_PMC_Hold_correct'])
+vec_std_mean_max_PMC_Hold_total_09_test=np.std(data_test_09['mean_max_PMC_Hold_total'])
+
+vec_std_mean_Pmax_Go_09_test=np.std(data_test_09['mean_Pmax_Go'])
+vec_std_mean_Pmax_Hold_09_test=np.std(data_test_09['mean_Pmax_Hold'])
+vec_std_mean_Pmax_Hold_correct_09_test=np.std(data_test_09['mean_Pmax_Hold_correct'])
+vec_std_mean_Pmax_Hold_total_09_test=np.std(data_test_09['mean_Pmax_Hold_total'])
+
+vec_std_mean_SSRT_09_test=np.std(data_test_09['SSRT'])
+vec_std_right_inhibition_09_test=np.std(data_test_09['right_inhibition'])
+vec_std_accuracy_09_test=np.std(data_test_09['accuracy'])
+
+#reaction time Go
+#training
+vec_mean_mean_reaction_time_Go_training=[vec_mean_mean_reaction_time_Go_01_training,vec_mean_mean_reaction_time_Go_03_training,vec_mean_mean_reaction_time_Go_05_training,vec_mean_mean_reaction_time_Go_07_training,vec_mean_mean_reaction_time_Go_09_training]
+vec_std_mean_reaction_time_Go_training=[vec_std_mean_reaction_time_Go_01_training,vec_std_mean_reaction_time_Go_03_training,vec_std_mean_reaction_time_Go_05_training,vec_std_mean_reaction_time_Go_07_training,vec_std_mean_reaction_time_Go_09_training]
+
+#test
+vec_mean_mean_reaction_time_Go_test=[vec_mean_mean_reaction_time_Go_01_test,vec_mean_mean_reaction_time_Go_03_test,vec_mean_mean_reaction_time_Go_05_test,vec_mean_mean_reaction_time_Go_07_test,vec_mean_mean_reaction_time_Go_09_test]
+vec_std_mean_reaction_time_Go_test=[vec_std_mean_reaction_time_Go_01_test,vec_std_mean_reaction_time_Go_03_test,vec_std_mean_reaction_time_Go_05_test,vec_std_mean_reaction_time_Go_07_test,vec_std_mean_reaction_time_Go_09_test]
+
+#reaction time Hold failure 
+#training
+vec_mean_mean_reaction_time_Hold_training=[vec_mean_mean_reaction_time_Hold_01_training,vec_mean_mean_reaction_time_Hold_03_training,vec_mean_mean_reaction_time_Hold_05_training,vec_mean_mean_reaction_time_Hold_07_training,vec_mean_mean_reaction_time_Hold_09_training]
+vec_std_mean_reaction_time_Hold_training=[vec_std_mean_reaction_time_Hold_01_training,vec_std_mean_reaction_time_Hold_03_training,vec_std_mean_reaction_time_Hold_05_training,vec_std_mean_reaction_time_Hold_07_training,vec_std_mean_reaction_time_Hold_09_training]
+
+#test
+vec_mean_mean_reaction_time_Hold_test=[vec_mean_mean_reaction_time_Hold_01_test,vec_mean_mean_reaction_time_Hold_03_test,vec_mean_mean_reaction_time_Hold_05_test,vec_mean_mean_reaction_time_Hold_07_test,vec_mean_mean_reaction_time_Hold_09_test]
+vec_std_mean_reaction_time_Hold_test=[vec_std_mean_reaction_time_Hold_01_test,vec_std_mean_reaction_time_Hold_03_test,vec_std_mean_reaction_time_Hold_05_test,vec_std_mean_reaction_time_Hold_07_test,vec_std_mean_reaction_time_Hold_09_test]
+
+#reaction time Hold correct
+#training
+vec_mean_mean_reaction_time_Hold_correct_training=[vec_mean_mean_reaction_time_Hold_correct_01_training,vec_mean_mean_reaction_time_Hold_correct_03_training,vec_mean_mean_reaction_time_Hold_correct_05_training,vec_mean_mean_reaction_time_Hold_correct_07_training,vec_mean_mean_reaction_time_Hold_correct_09_training]
+vec_std_mean_reaction_time_Hold_correct_training=[vec_std_mean_reaction_time_Hold_correct_01_training,vec_std_mean_reaction_time_Hold_correct_03_training,vec_std_mean_reaction_time_Hold_correct_05_training,vec_std_mean_reaction_time_Hold_correct_07_training,vec_std_mean_reaction_time_Hold_correct_09_training]
+
+#test
+vec_mean_mean_reaction_time_Hold_correct_test=[vec_mean_mean_reaction_time_Hold_correct_01_test,vec_mean_mean_reaction_time_Hold_correct_03_test,vec_mean_mean_reaction_time_Hold_correct_05_test,vec_mean_mean_reaction_time_Hold_correct_07_test,vec_mean_mean_reaction_time_Hold_correct_09_test]
+vec_std_mean_reaction_time_Hold_correct_test=[vec_std_mean_reaction_time_Hold_correct_01_test,vec_std_mean_reaction_time_Hold_correct_03_test,vec_std_mean_reaction_time_Hold_correct_05_test,vec_std_mean_reaction_time_Hold_correct_07_test,vec_std_mean_reaction_time_Hold_correct_09_test]
+
+#reaction time Hold total
+#training
+vec_mean_mean_reaction_time_Hold_total_training=[vec_mean_mean_reaction_time_Hold_total_01_training,vec_mean_mean_reaction_time_Hold_total_03_training,vec_mean_mean_reaction_time_Hold_total_05_training,vec_mean_mean_reaction_time_Hold_total_07_training,vec_mean_mean_reaction_time_Hold_total_09_training]
+vec_std_mean_reaction_time_Hold_total_training=[vec_std_mean_reaction_time_Hold_total_01_training,vec_std_mean_reaction_time_Hold_total_03_training,vec_std_mean_reaction_time_Hold_total_05_training,vec_std_mean_reaction_time_Hold_total_07_training,vec_std_mean_reaction_time_Hold_total_09_training]
+
+#test
+vec_mean_mean_reaction_time_Hold_total_test=[vec_mean_mean_reaction_time_Hold_total_01_test,vec_mean_mean_reaction_time_Hold_total_03_test,vec_mean_mean_reaction_time_Hold_total_05_test,vec_mean_mean_reaction_time_Hold_total_07_test,vec_mean_mean_reaction_time_Hold_total_09_test]
+vec_std_mean_reaction_time_Hold_total_test=[vec_std_mean_reaction_time_Hold_total_01_test,vec_std_mean_reaction_time_Hold_total_03_test,vec_std_mean_reaction_time_Hold_total_05_test,vec_std_mean_reaction_time_Hold_total_07_test,vec_std_mean_reaction_time_Hold_total_09_test]
+
+#MAX PMC Go
+#training
+vec_mean_mean_max_PMC_Go_training=[vec_mean_mean_max_PMC_Go_01_training,vec_mean_mean_max_PMC_Go_03_training,vec_mean_mean_max_PMC_Go_05_training,vec_mean_mean_max_PMC_Go_07_training,vec_mean_mean_max_PMC_Go_09_training]
+vec_std_mean_max_PMC_Go_training=[vec_std_mean_max_PMC_Go_01_training,vec_std_mean_max_PMC_Go_03_training,vec_std_mean_max_PMC_Go_05_training,vec_std_mean_max_PMC_Go_07_training,vec_std_mean_max_PMC_Go_09_training]
+
+#test
+vec_mean_mean_max_PMC_Go_test=[vec_mean_mean_max_PMC_Go_01_test,vec_mean_mean_max_PMC_Go_03_test,vec_mean_mean_max_PMC_Go_05_test,vec_mean_mean_max_PMC_Go_07_test,vec_mean_mean_max_PMC_Go_09_test]
+vec_std_mean_max_PMC_Go_test=[vec_std_mean_max_PMC_Go_01_test,vec_std_mean_max_PMC_Go_03_test,vec_std_mean_max_PMC_Go_05_test,vec_std_mean_max_PMC_Go_07_test,vec_std_mean_max_PMC_Go_09_test]
+
+#MAX PMC Hold
+#training
+vec_mean_mean_max_PMC_Hold_training=[vec_mean_mean_max_PMC_Hold_01_training,vec_mean_mean_max_PMC_Hold_03_training,vec_mean_mean_max_PMC_Hold_05_training,vec_mean_mean_max_PMC_Hold_07_training,vec_mean_mean_max_PMC_Hold_09_training]
+vec_std_mean_max_PMC_Hold_training=[vec_std_mean_max_PMC_Hold_01_training,vec_std_mean_max_PMC_Hold_03_training,vec_std_mean_max_PMC_Hold_05_training,vec_std_mean_max_PMC_Hold_07_training,vec_std_mean_max_PMC_Hold_09_training]
+
+#test
+vec_mean_mean_max_PMC_Hold_test=[vec_mean_mean_max_PMC_Hold_01_test,vec_mean_mean_max_PMC_Hold_03_test,vec_mean_mean_max_PMC_Hold_05_test,vec_mean_mean_max_PMC_Hold_07_test,vec_mean_mean_max_PMC_Hold_09_test]
+vec_std_mean_max_PMC_Hold_test=[vec_std_mean_max_PMC_Hold_01_test,vec_std_mean_max_PMC_Hold_03_test,vec_std_mean_max_PMC_Hold_05_test,vec_std_mean_max_PMC_Hold_07_test,vec_std_mean_max_PMC_Hold_09_test]
+
+#MAX PMC Hold correct 
+#training
+vec_mean_mean_max_PMC_Hold_correct_training=[vec_mean_mean_max_PMC_Hold_correct_01_training,vec_mean_mean_max_PMC_Hold_correct_03_training,vec_mean_mean_max_PMC_Hold_correct_05_training,vec_mean_mean_max_PMC_Hold_correct_07_training,vec_mean_mean_max_PMC_Hold_correct_09_training]
+vec_std_mean_max_PMC_Hold_correct_training=[vec_std_mean_max_PMC_Hold_correct_01_training,vec_std_mean_max_PMC_Hold_correct_03_training,vec_std_mean_max_PMC_Hold_correct_05_training,vec_std_mean_max_PMC_Hold_correct_07_training,vec_std_mean_max_PMC_Hold_correct_09_training]
+
+#test
+vec_mean_mean_max_PMC_Hold_correct_test=[vec_mean_mean_max_PMC_Hold_correct_01_test,vec_mean_mean_max_PMC_Hold_correct_03_test,vec_mean_mean_max_PMC_Hold_correct_05_test,vec_mean_mean_max_PMC_Hold_correct_07_test,vec_mean_mean_max_PMC_Hold_correct_09_test]
+vec_std_mean_max_PMC_Hold_correct_test=[vec_std_mean_max_PMC_Hold_correct_01_test,vec_std_mean_max_PMC_Hold_correct_03_test,vec_std_mean_max_PMC_Hold_correct_05_test,vec_std_mean_max_PMC_Hold_correct_07_test,vec_std_mean_max_PMC_Hold_correct_09_test]
+
+#MAX PMC Hold total
+#training
+vec_mean_mean_max_PMC_Hold_total_training=[vec_mean_mean_max_PMC_Hold_total_01_training,vec_mean_mean_max_PMC_Hold_total_03_training,vec_mean_mean_max_PMC_Hold_total_05_training,vec_mean_mean_max_PMC_Hold_total_07_training,vec_mean_mean_max_PMC_Hold_total_09_training]
+vec_std_mean_max_PMC_Hold_total_training=[vec_std_mean_max_PMC_Hold_total_01_training,vec_std_mean_max_PMC_Hold_total_03_training,vec_std_mean_max_PMC_Hold_total_05_training,vec_std_mean_max_PMC_Hold_total_07_training,vec_std_mean_max_PMC_Hold_total_09_training]
+
+#test
+vec_mean_mean_max_PMC_Hold_total_test=[vec_mean_mean_max_PMC_Hold_total_01_test,vec_mean_mean_max_PMC_Hold_total_03_test,vec_mean_mean_max_PMC_Hold_total_05_test,vec_mean_mean_max_PMC_Hold_total_07_test,vec_mean_mean_max_PMC_Hold_total_09_test]
+vec_std_mean_max_PMC_Hold_total_test=[vec_std_mean_max_PMC_Hold_total_01_test,vec_std_mean_max_PMC_Hold_total_03_test,vec_std_mean_max_PMC_Hold_total_05_test,vec_std_mean_max_PMC_Hold_total_07_test,vec_std_mean_max_PMC_Hold_total_09_test]
+
+#Pmax Go
+#training 
+vec_mean_mean_Pmax_Go_training=[vec_mean_mean_Pmax_Go_01_training,vec_mean_mean_Pmax_Go_03_training,vec_mean_mean_Pmax_Go_05_training,vec_mean_mean_Pmax_Go_07_training,vec_mean_mean_Pmax_Go_09_training]
+vec_std_mean_Pmax_Go_training=[vec_std_mean_Pmax_Go_01_training,vec_std_mean_Pmax_Go_03_training,vec_std_mean_Pmax_Go_05_training,vec_std_mean_Pmax_Go_07_training,vec_std_mean_Pmax_Go_09_training]
+
+#test
+vec_mean_mean_Pmax_Go_test=[vec_mean_mean_Pmax_Go_01_test,vec_mean_mean_Pmax_Go_03_test,vec_mean_mean_Pmax_Go_05_test,vec_mean_mean_Pmax_Go_07_test,vec_mean_mean_Pmax_Go_09_test]
+vec_std_mean_Pmax_Go_test=[vec_std_mean_Pmax_Go_01_test,vec_std_mean_Pmax_Go_03_test,vec_std_mean_Pmax_Go_05_test,vec_std_mean_Pmax_Go_07_test,vec_std_mean_Pmax_Go_09_test]
+
+#Pmax Hold
+#training
+vec_mean_mean_Pmax_Hold_training=[vec_mean_mean_Pmax_Hold_01_training,vec_mean_mean_Pmax_Hold_03_training,vec_mean_mean_Pmax_Hold_05_training,vec_mean_mean_Pmax_Hold_07_training,vec_mean_mean_Pmax_Hold_09_training]
+vec_std_mean_Pmax_Hold_training=[vec_std_mean_Pmax_Hold_01_training,vec_std_mean_Pmax_Hold_03_training,vec_std_mean_Pmax_Hold_05_training,vec_std_mean_Pmax_Hold_07_training,vec_std_mean_Pmax_Hold_09_training]
+
+#test
+vec_mean_mean_Pmax_Hold_test=[vec_mean_mean_Pmax_Hold_01_test,vec_mean_mean_Pmax_Hold_03_test,vec_mean_mean_Pmax_Hold_05_test,vec_mean_mean_Pmax_Hold_07_test,vec_mean_mean_Pmax_Hold_09_test]
+vec_std_mean_Pmax_Hold_test=[vec_std_mean_Pmax_Hold_01_test,vec_std_mean_Pmax_Hold_03_test,vec_std_mean_Pmax_Hold_05_test,vec_std_mean_Pmax_Hold_07_test,vec_std_mean_Pmax_Hold_09_test]
+
+#Pmax Hold correct 
+#training
+vec_mean_mean_Pmax_Hold_correct_training=[vec_mean_mean_Pmax_Hold_correct_01_training,vec_mean_mean_Pmax_Hold_correct_03_training,vec_mean_mean_Pmax_Hold_correct_05_training,vec_mean_mean_Pmax_Hold_correct_07_training,vec_mean_mean_Pmax_Hold_correct_09_training]
+vec_std_mean_Pmax_Hold_correct_training=[vec_std_mean_Pmax_Hold_correct_01_training,vec_std_mean_Pmax_Hold_correct_03_training,vec_std_mean_Pmax_Hold_correct_05_training,vec_std_mean_Pmax_Hold_correct_07_training,vec_std_mean_Pmax_Hold_correct_09_training]
+
+#test
+vec_mean_mean_Pmax_Hold_correct_test=[vec_mean_mean_Pmax_Hold_correct_01_test,vec_mean_mean_Pmax_Hold_correct_03_test,vec_mean_mean_Pmax_Hold_correct_05_test,vec_mean_mean_Pmax_Hold_correct_07_test,vec_mean_mean_Pmax_Hold_correct_09_test]
+vec_std_mean_Pmax_Hold_correct_test=[vec_std_mean_Pmax_Hold_correct_01_test,vec_std_mean_Pmax_Hold_correct_03_test,vec_std_mean_Pmax_Hold_correct_05_test,vec_std_mean_Pmax_Hold_correct_07_test,vec_std_mean_Pmax_Hold_correct_09_test]
+
+#Pmax Hold total 
+#training
+vec_mean_mean_Pmax_Hold_total_training=[vec_mean_mean_Pmax_Hold_total_01_training,vec_mean_mean_Pmax_Hold_total_03_training,vec_mean_mean_Pmax_Hold_total_05_training,vec_mean_mean_Pmax_Hold_total_07_training,vec_mean_mean_Pmax_Hold_total_09_training]
+vec_std_mean_Pmax_Hold_total_training=[vec_std_mean_Pmax_Hold_total_01_training,vec_std_mean_Pmax_Hold_total_03_training,vec_std_mean_Pmax_Hold_total_05_training,vec_std_mean_Pmax_Hold_total_07_training,vec_std_mean_Pmax_Hold_total_09_training]
+
+#test
+vec_mean_mean_Pmax_Hold_total_test=[vec_mean_mean_Pmax_Hold_total_01_test,vec_mean_mean_Pmax_Hold_total_03_test,vec_mean_mean_Pmax_Hold_total_05_test,vec_mean_mean_Pmax_Hold_total_07_test,vec_mean_mean_Pmax_Hold_total_09_test]
+vec_std_mean_Pmax_Hold_total_test=[vec_std_mean_Pmax_Hold_total_01_test,vec_std_mean_Pmax_Hold_total_03_test,vec_std_mean_Pmax_Hold_total_05_test,vec_std_mean_Pmax_Hold_total_07_test,vec_std_mean_Pmax_Hold_total_09_test]
+
+#SSRT
+#test
+vec_mean_mean_SSRT_test=[vec_mean_mean_SSRT_01_test,vec_mean_mean_SSRT_03_test,vec_mean_mean_SSRT_05_test,vec_mean_mean_SSRT_07_test,vec_mean_mean_SSRT_09_test]
+vec_std_mean_SSRT_test=[vec_std_mean_SSRT_01_test,vec_std_mean_SSRT_03_test,vec_std_mean_SSRT_05_test,vec_std_mean_SSRT_07_test,vec_std_mean_SSRT_09_test]
+
+#right inhibition
+#training
+vec_mean_right_inhibition_training=[vec_mean_right_inhibition_01_training,vec_mean_right_inhibition_03_training,vec_mean_right_inhibition_05_training,vec_mean_right_inhibition_07_training,vec_mean_right_inhibition_09_training]
+vec_std_right_inhibition_training=[vec_std_right_inhibition_01_training,vec_std_right_inhibition_03_training,vec_std_right_inhibition_05_training,vec_std_right_inhibition_07_training,vec_std_right_inhibition_09_training]
+
+#test
+vec_mean_right_inhibition_test=[vec_mean_right_inhibition_01_test,vec_mean_right_inhibition_03_test,vec_mean_right_inhibition_05_test,vec_mean_right_inhibition_07_test,vec_mean_right_inhibition_09_test]
+vec_std_right_inhibition_test=[vec_std_right_inhibition_01_test,vec_std_right_inhibition_03_test,vec_std_right_inhibition_05_test,vec_std_right_inhibition_07_test,vec_std_right_inhibition_09_test]
+
+#global accuracy
+#training
+vec_mean_accuracy_training=[vec_mean_accuracy_01_training,vec_mean_accuracy_03_training,vec_mean_accuracy_05_training,vec_mean_accuracy_07_training,vec_mean_accuracy_09_training]
+vec_std_accuracy_training=[vec_std_accuracy_01_training,vec_std_accuracy_03_training,vec_std_accuracy_05_training,vec_std_accuracy_07_training,vec_std_accuracy_09_training]
+
+#test
+vec_mean_accuracy_test=[vec_mean_accuracy_01_test,vec_mean_accuracy_03_test,vec_mean_accuracy_05_test,vec_mean_accuracy_07_test,vec_mean_accuracy_09_test]
+vec_std_accuracy_test=[vec_std_accuracy_01_test,vec_std_accuracy_03_test,vec_std_accuracy_05_test,vec_std_accuracy_07_test,vec_std_accuracy_09_test]
+
+plt.figure()
+plt.errorbar([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_reaction_time_Go_training, yerr= vec_std_mean_reaction_time_Go_training/np.sqrt(40), color='black', alpha=0.8,linestyle='dashed')
+plt.scatter([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_reaction_time_Go_training,s=40, color='black', alpha=0.8,marker='o')
+plt.errorbar([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_reaction_time_Go_test, yerr= vec_std_mean_reaction_time_Go_test/np.sqrt(40), color='black', alpha=0.8)
+plt.scatter([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_reaction_time_Go_test,s=40, color='black', alpha=0.8,linestyle='dashed', marker='o',label='Simulation Data Test')
+plt.xlabel("Dopamine Concentration", size=17)
+plt.ylabel("Reaction Time Go [samples]",size=17)
+plt.ylim(8,35)
+#plt.legend(ncol=1, fancybox=True, shadow=True)
+plt.show()
+
+plt.figure()
+plt.errorbar([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_reaction_time_Hold_training, yerr= vec_std_mean_reaction_time_Hold_training/np.sqrt(40), color='#4F4F4F', alpha=0.8,linestyle='dashed')
+plt.scatter([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_reaction_time_Hold_training,s=40, color='#4F4F4F', alpha=0.8, marker='o',label='Simulation Data Training')
+plt.errorbar([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_reaction_time_Hold_test, yerr= vec_std_mean_reaction_time_Hold_test/np.sqrt(40), color='#4F4F4F', alpha=0.8)
+plt.scatter([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_reaction_time_Hold_test,s=40, color='#4F4F4F', alpha=0.8, marker='o',label='Simulation Data Test')
+plt.errorbar([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_reaction_time_Hold_correct_training, yerr= vec_std_mean_reaction_time_Hold_correct_training/np.sqrt(40), color='#8E8E8E', alpha=0.8,linestyle='dashed')
+plt.scatter([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_reaction_time_Hold_correct_training,s=40, color='#8E8E8E', alpha=0.8, marker='o',label='Simulation Data Training')
+plt.errorbar([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_reaction_time_Hold_correct_test, yerr= vec_std_mean_reaction_time_Hold_correct_test/np.sqrt(40), color='#8E8E8E', alpha=0.8)
+plt.scatter([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_reaction_time_Hold_correct_test,s=40, color='#8E8E8E', alpha=0.8, marker='o',label='Simulation Data Test')
+plt.xlabel("Dopamine Concentration", size=17)
+plt.ylabel("Reaction Time Hold failure [samples]",size=17)
+plt.ylim(8,35)
+#plt.grid()
+#plt.legend(ncol=1, fancybox=True, shadow=True)
+plt.show()
+
+plt.figure()
+plt.errorbar([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_reaction_time_Hold_correct_training, yerr= vec_std_mean_reaction_time_Hold_correct_training/np.sqrt(40), color='#8E8E8E', alpha=0.8,linestyle='dashed')
+plt.scatter([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_reaction_time_Hold_correct_training,s=40, color='#8E8E8E', alpha=0.8, marker='o',label='Simulation Data Training')
+plt.errorbar([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_reaction_time_Hold_correct_test, yerr= vec_std_mean_reaction_time_Hold_correct_test/np.sqrt(40), color='#8E8E8E', alpha=0.8)
+plt.scatter([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_reaction_time_Hold_correct_test,s=40, color='#8E8E8E', alpha=0.8, marker='o',label='Simulation Data Test')
+plt.xlabel("Dopamine Concentration", size=17)
+plt.ylabel("Reaction Time Hold correct [samples]",size=17)
+plt.ylim(8,35)
+#plt.grid()
+#plt.legend(ncol=1, fancybox=True, shadow=True)
+plt.show()
+
+plt.figure()
+plt.errorbar([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_reaction_time_Hold_total_training, yerr= vec_std_mean_reaction_time_Hold_total_training/np.sqrt(40), color='black', alpha=0.8,linestyle='dashed')
+plt.scatter([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_reaction_time_Hold_total_training,s=40, color='black', alpha=0.8, marker='o',label='Simulation Data Training')
+plt.errorbar([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_reaction_time_Hold_total_test, yerr= vec_std_mean_reaction_time_Hold_total_test/np.sqrt(40), color='black', alpha=0.8)
+plt.scatter([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_reaction_time_Hold_total_test,s=40, color='black', alpha=0.8, marker='o',label='Simulation Data Test')
+plt.xlabel("Dopamine Concentration", size=17)
+plt.ylabel("Reaction Time Hold total [samples]",size=17)
+plt.ylim(8,35)
+#plt.grid()
+#plt.legend(ncol=1, fancybox=True, shadow=True)
+plt.show()
+
+plt.figure()
+plt.errorbar([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_max_PMC_Go_training, yerr= vec_std_mean_max_PMC_Go_training/np.sqrt(40), color='black', alpha=0.8,linestyle='dashed')
+plt.scatter([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_max_PMC_Go_training,s=40, color='black', alpha=0.8, marker='o',label='Simulation Data Training')
+plt.errorbar([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_max_PMC_Go_test, yerr= vec_std_mean_max_PMC_Go_test/np.sqrt(40), color='black', alpha=0.8)
+plt.scatter([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_max_PMC_Go_test,s=40, color='black', alpha=0.8, marker='o',label='Simulation Data Test')
+plt.xlabel("Dopamine Concentration", size=17)
+plt.ylabel("PMC max peak Go[",size=17)
+plt.ylim(0,0.8)
+#plt.grid()
+#plt.legend(ncol=1, fancybox=True, shadow=True)
+plt.show()
+
+plt.figure()
+plt.errorbar([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_max_PMC_Hold_training, yerr= vec_std_mean_max_PMC_Hold_training/np.sqrt(40), color='#4F4F4F', alpha=0.8,linestyle='dashed')
+plt.scatter([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_max_PMC_Hold_training,s=40, color='#4F4F4F', alpha=0.8, marker='o',label='Simulation Data Training')
+plt.errorbar([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_max_PMC_Hold_test, yerr= vec_std_mean_max_PMC_Hold_test/np.sqrt(40), color='#4F4F4F', alpha=0.8)
+plt.scatter([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_max_PMC_Hold_test,s=40, color='#4F4F4F', alpha=0.8, marker='o',label='Simulation Data Test')
+plt.errorbar([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_max_PMC_Hold_correct_training, yerr= vec_std_mean_max_PMC_Hold_correct_training/np.sqrt(40), color='#8E8E8E', alpha=0.8,linestyle='dashed')
+plt.scatter([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_max_PMC_Hold_correct_training,s=40, color='#8E8E8E', alpha=0.8, marker='o',label='Simulation Data Training')
+plt.errorbar([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_max_PMC_Hold_correct_test, yerr= vec_std_mean_max_PMC_Hold_correct_test/np.sqrt(40), color='#8E8E8E', alpha=0.8)
+plt.scatter([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_max_PMC_Hold_correct_test,s=40, color='#8E8E8E', alpha=0.8, marker='o',label='Simulation Data Test')
+plt.xlabel("Dopamine Concentration", size=17)
+plt.ylabel("PMC max peak Hold failure",size=17)
+plt.ylim(0,0.8)
+#plt.grid()
+#plt.legend(ncol=1, fancybox=True, shadow=True)
+plt.show()
+
+plt.figure()
+plt.errorbar([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_max_PMC_Hold_correct_training, yerr= vec_std_mean_max_PMC_Hold_correct_training/np.sqrt(40), color='#8E8E8E', alpha=0.8,linestyle='dashed')
+plt.scatter([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_max_PMC_Hold_correct_training,s=40, color='#8E8E8E', alpha=0.8, marker='o',label='Simulation Data Training')
+plt.errorbar([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_max_PMC_Hold_correct_test, yerr= vec_std_mean_max_PMC_Hold_correct_test/np.sqrt(40), color='#8E8E8E', alpha=0.8)
+plt.scatter([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_max_PMC_Hold_correct_test,s=40, color='#8E8E8E', alpha=0.8, marker='o',label='Simulation Data Test')
+plt.xlabel("Dopamine Concentration", size=17)
+plt.ylabel("PMC max peak Hold correct",size=17)
+plt.ylim(0,0.8)
+#plt.grid()
+#plt.legend(ncol=1, fancybox=True, shadow=True)
+plt.show()
+
+plt.figure()
+plt.errorbar([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_max_PMC_Hold_total_training, yerr= vec_std_mean_max_PMC_Hold_total_training/np.sqrt(40), color='black', alpha=0.8,linestyle='dashed')
+plt.scatter([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_max_PMC_Hold_total_training,s=40, color='black', alpha=0.8, marker='o',label='Simulation Data Training')
+plt.errorbar([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_max_PMC_Hold_total_test, yerr= vec_std_mean_max_PMC_Hold_total_test/np.sqrt(40), color='black', alpha=0.8)
+plt.scatter([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_max_PMC_Hold_total_test,s=40, color='black', alpha=0.8, marker='o',label='Simulation Data Test')
+plt.xlabel("Dopamine Concentration", size=17)
+plt.ylabel("PMC max peak Hold total",size=17)
+plt.ylim(0,0.8)
+#plt.grid()
+#plt.legend(ncol=1, fancybox=True, shadow=True)
+plt.show()
+
+plt.figure()
+plt.errorbar([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_Pmax_Go_training, yerr= vec_std_mean_Pmax_Go_training/np.sqrt(40), color='black', alpha=0.8,linestyle='dashed')
+plt.scatter([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_Pmax_Go_training,s=40, color='black', alpha=0.8, marker='o',label='Simulation Data Training')
+plt.errorbar([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_Pmax_Go_test, yerr= vec_std_mean_Pmax_Go_test/np.sqrt(40), color='black', alpha=0.8)
+plt.scatter([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_Pmax_Go_test,s=40, color='black', alpha=0.8, marker='o',label='Simulation Data Test')
+plt.xlabel("Dopamine Concentration", size=17)
+plt.ylabel("Pmax Go ",size=17)
+plt.ylim(0,0.55)
+#plt.grid()
+#plt.legend(ncol=1, fancybox=True, shadow=True)
+plt.show()
+
+plt.figure()
+plt.errorbar([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_Pmax_Hold_training, yerr= vec_std_mean_Pmax_Hold_training/np.sqrt(40), color='#4F4F4F', alpha=0.8,linestyle='dashed')
+plt.scatter([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_Pmax_Hold_training,s=40, color='#4F4F4F', alpha=0.8, marker='o',label='Simulation Data Training')
+plt.errorbar([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_Pmax_Hold_test, yerr= vec_std_mean_Pmax_Hold_test/np.sqrt(40), color='#4F4F4F', alpha=0.8)
+plt.scatter([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_Pmax_Hold_test,s=40, color='#4F4F4F', alpha=0.8, marker='o',label='Simulation Data Test')
+plt.errorbar([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_Pmax_Hold_correct_training, yerr= vec_std_mean_Pmax_Hold_correct_training/np.sqrt(40), color='#8E8E8E', alpha=0.8,linestyle='dashed')
+plt.scatter([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_Pmax_Hold_correct_training,s=40, color='#8E8E8E', alpha=0.8, marker='o',label='Simulation Data Training')
+plt.errorbar([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_Pmax_Hold_correct_test, yerr= vec_std_mean_Pmax_Hold_correct_test/np.sqrt(40), color='#8E8E8E', alpha=0.8)
+plt.scatter([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_Pmax_Hold_correct_test,s=40, color='#8E8E8E', alpha=0.8, marker='o',label='Simulation Data Test')
+plt.xlabel("Dopamine Concentration", size=17)
+plt.ylabel("Pmax Hold failure",size=17)
+plt.ylim(0,0.55)
+#plt.grid()
+#plt.legend(ncol=1, fancybox=True, shadow=True)
+plt.show()
+
+plt.figure()
+plt.errorbar([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_Pmax_Hold_correct_training, yerr= vec_std_mean_Pmax_Hold_correct_training/np.sqrt(40), color='#8E8E8E', alpha=0.8,linestyle='dashed')
+plt.scatter([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_Pmax_Hold_correct_training,s=40, color='#8E8E8E', alpha=0.8, marker='o',label='Simulation Data Training')
+plt.errorbar([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_Pmax_Hold_correct_test, yerr= vec_std_mean_Pmax_Hold_correct_test/np.sqrt(40), color='#8E8E8E', alpha=0.8)
+plt.scatter([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_Pmax_Hold_correct_test,s=40, color='#8E8E8E', alpha=0.8, marker='o',label='Simulation Data Test')
+plt.xlabel("Dopamine Concentration  ", size=17)
+plt.ylabel("Pmax Hold correct",size=17)
+plt.ylim(0,0.55)
+#plt.grid()
+#plt.legend(ncol=1, fancybox=True, shadow=True)
+plt.show()
+
+plt.figure()
+plt.errorbar([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_Pmax_Hold_total_training, yerr= vec_std_mean_Pmax_Hold_total_training/np.sqrt(40), color='black', alpha=0.8,linestyle='dashed')
+plt.scatter([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_Pmax_Hold_total_training,s=40, color='black', alpha=0.8, marker='o',label='Simulation Data Training')
+plt.errorbar([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_Pmax_Hold_total_test, yerr= vec_std_mean_Pmax_Hold_total_test/np.sqrt(40), color='black', alpha=0.8)
+plt.scatter([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_Pmax_Hold_total_test,s=40, color='black', alpha=0.8, marker='o',label='Simulation Data Test')
+plt.xlabel("Dopamine Concentration  ", size=17)
+plt.ylabel("Pmax Hold total",size=17)
+plt.ylim(0,0.55)
+#plt.grid()
+#plt.legend(ncol=1, fancybox=True, shadow=True)
+plt.show()
+
+plt.figure()
+plt.errorbar([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_SSRT_test, yerr= vec_std_mean_SSRT_test/np.sqrt(40), color='black', alpha=0.8)
+plt.scatter([0.1,0.3,0.5,0.7,0.9],vec_mean_mean_SSRT_test,s=40, color='black', alpha=0.8, marker='o',label='Simulation Data Test')
+plt.xlabel("Dopamine Concentration", size=17)
+plt.ylabel("SSRT [samples]",size=17)
+plt.ylim(2,18)
+#plt.grid()
+#plt.legend(ncol=1, fancybox=True, shadow=True)
+plt.show()
+
+plt.figure()
+plt.errorbar([0.1,0.3,0.5,0.7,0.9],vec_mean_right_inhibition_training, yerr= vec_std_right_inhibition_training/np.sqrt(40), color='black', alpha=0.8,linestyle='dashed')
+plt.scatter([0.1,0.3,0.5,0.7,0.9],vec_mean_right_inhibition_training,s=40, color='black', alpha=0.8, marker='o',label='Simulation Data Training')
+plt.errorbar([0.1,0.3,0.5,0.7,0.9],vec_mean_right_inhibition_test, yerr= vec_std_right_inhibition_test/np.sqrt(40), color='black', alpha=0.8)
+plt.scatter([0.1,0.3,0.5,0.7,0.9],vec_mean_right_inhibition_test,s=40, color='black', alpha=0.8, marker='o',label='Simulation Data Test')
+plt.xlabel("Dopamine Concentration", size=17)
+plt.ylabel("Right Inhibition [%]",size=17)
+plt.ylim(0,100)
+#plt.grid()
+#plt.legend(ncol=1, fancybox=True, shadow=True)
+plt.show()
+
+plt.figure()
+plt.errorbar([0.1,0.3,0.5,0.7,0.9],vec_mean_accuracy_training, yerr= vec_std_accuracy_training/np.sqrt(40), color='black', alpha=0.8,linestyle='dashed')
+plt.scatter([0.1,0.3,0.5,0.7,0.9],vec_mean_accuracy_training,s=40, color='black', alpha=0.8, marker='o',label='Simulation Data Training')
+plt.errorbar([0.1,0.3,0.5,0.7,0.9],vec_mean_accuracy_test, yerr= vec_std_accuracy_test/np.sqrt(40), color='black', alpha=0.8)
+plt.scatter([0.1,0.3,0.5,0.7,0.9],vec_mean_accuracy_test,s=40, color='black', alpha=0.8, marker='o',label='Simulation Data Test')
+plt.xlabel("Dopamine Concentration", size=17)
+plt.ylabel("Accuracy [%]",size=17)
+plt.ylim(0,100)
+#plt.grid()
+#plt.legend(ncol=1, fancybox=True, shadow=True)
+plt.show()
